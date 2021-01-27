@@ -1,3 +1,3 @@
-# sentinelAPI
+# NodeJS + ExpressJS + Typescript
 
 
