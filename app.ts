@@ -1,11 +1,20 @@
-import debug = require('debug');
-import express = require('express');
-import path = require('path');
+import debug from 'debug';
+import express from 'express';
+import path from 'path';
+import * as bodyparser from 'body-parser';
+
+import cors from 'cors'
 
 import routes from './routes/index';
 import users from './routes/user';
 
+var dotenv = require('dotenv');
+dotenv.config();
+
 const app = express();
+
+app.use(bodyparser.json());
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
